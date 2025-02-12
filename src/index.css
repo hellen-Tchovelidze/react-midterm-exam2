@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-color: lightgray;
+  height: 100vh;
+  padding: 20px;
+}
