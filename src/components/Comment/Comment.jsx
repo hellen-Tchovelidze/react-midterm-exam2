@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import Count from "../count/count";
-
+import "./com.css"
 const Comment = ({
   comment,
   editMode,
@@ -103,12 +103,12 @@ const Comment = ({
   return (
     <div className="mt-4 space-y-4 justify-start  p-7">
       
-      <div className="p-4 bg-white border-2 border-[#E9EBF0] rounded-xl shadow w-[730px] flex items-start">
+      <div className="p-4 bg-white border-2 border-[#E9EBF0] rounded-xl shadow w-[730px] flex items-start  conteinerdiv ">
         <div className="mr-4">
           <Count />
         </div>
-        <div className="flex flex-col w-full">
-          <div className="flex justify-between items-start w-full">
+        <div className="flex flex-col w-full ">
+          <div className="flex justify-between items-start w-full headerdiv">
             <div className="flex items-center gap-2">
               <img
                 src={comment.avatar}
@@ -184,12 +184,12 @@ const Comment = ({
 
      
       {showReplyInput[comment.id] && (
-        <div className="mt-2 flex gap-4 justify-center bg-white h-[144px] w-[730px]  items-center rounded-lg">
+        <div className="mt-2 flex gap-4 justify-center bg-white h-[144px] w-[730px]  items-center rounded-lg cont">
           <textarea
             value={localReplyInput}
             onChange={handleReplyInputChange}
             placeholder="Write a reply..."
-            className="w-full max-w-[506px] h-[96px] border-2 border-[#E9EBF0] focus:border-[#5357B6] focus:outline-none rounded-lg p-2"
+            className="w-full max-w-[506px] h-[96px] border-2 border-[#E9EBF0] focus:border-[#5357B6] focus:outline-none rounded-lg p-2 inpre"
           />
           <button
             onClick={handleAddReply}
@@ -203,12 +203,12 @@ const Comment = ({
     
       <div className="mt-4 space-y-4">
         {replies.map((reply) => (
-          <div key={reply.id} className="p-4 bg-white border-2 border-[#E9EBF0] rounded-xl shadow w-[600px] flex items-start ml-auto">
+          <div key={reply.id} className="p-4 bg-white border-2 border-[#E9EBF0] rounded-xl shadow w-[600px] flex items-start ml-auto conteinerreply">
             <div className="mr-4">
               <Count />
             </div>
             <div className="flex flex-col w-full">
-              <div className="flex justify-between items-start w-full">
+              <div className="flex justify-between items-start w-full headerdiv">
                 <div className="flex items-center gap-2">
                   <img
                     src={reply.avatar}
